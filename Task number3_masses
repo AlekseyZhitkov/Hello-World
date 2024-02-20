@@ -1,3 +1,5 @@
+// Задача № 3
+
 public class Variable_Test_3 {
     public static void main(String[] args) {
         // Задать массив из 5 любых целых чисел
