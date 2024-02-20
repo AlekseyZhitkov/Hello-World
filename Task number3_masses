@@ -1,0 +1,17 @@
+public class Variable_Test_3 {
+    public static void main(String[] args) {
+        // Задать массив из 5 любых целых чисел
+        int [] number1 = {1,2,3,4,5};
+
+        // Поменяем местами первый и последний элемент в массиве
+      int temp = number1[0];
+      number1[0] = number1[number1.length - 1];
+      number1[number1.length - 1] = temp;
+
+        // Найдем средний элемент
+        int middleIndex = number1.length / 2;
+
+        // Сумма первого и среднего элемента
+        System.out.println("Сумма первого и среднего элемента равна: " + (number1[0] + number1[2]));
+    }
+}
