@@ -1,0 +1,29 @@
+// Задача № 4
+public class Task_number_4_operators {
+    public static void main(String[] args) {
+        // Ввести три числа с клавиатуры x, y, z
+        Scanner s = new Scanner(System.in);
+        System.out.println("Введите значение x:");
+        int x = s.nextInt();
+        System.out.println("Введите значение y:");
+        int y = s.nextInt();
+        System.out.println("Введите значение z:");
+        int z = s.nextInt();
+
+        // Найти и вывести в консоль среднее арифметическое этих чисел
+        double middle = (x + y + z)/3;
+        System.out.println(middle);
+
+        //Разделить среднее арифметическое на 2 и округлить в меньшую сторону
+        double middle2 = Math.floor(middle/2);
+        System.out.println(middle2);
+
+        // Если полученное число больше 3, то вывести на экран сообщение "Программа выполнена корректно"
+        if (middle2 > 3){
+            System.out.println("Программа выполнена корректно");
+        }
+        else {
+            System.out.println("Что-то пошло не так");
+        }
+    }
+}
