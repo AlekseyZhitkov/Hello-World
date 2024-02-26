@@ -1,0 +1,34 @@
+public class Task_number_5_operators {
+    public static void main(String[] args) {
+        // Ввести 2 числа с клавиатуры, затем один из символов ‘+’, ‘-’, ‘*’ или ‘/’
+        Scanner s = new Scanner(System.in);
+        System.out.println("Первое число a:");
+        int a = s.nextInt();
+        System.out.println("Второе число b:");
+        int b = s.nextInt();
+        System.out.println("Введите символ операции (+, -, *, /):");
+
+        char operation = s.next().charAt(0);
+
+        double result = 0;
+        switch(operation) {
+            case '+':
+                result = a + b;
+                break;
+            case '-':
+                result = a - b;
+                break;
+            case '*':
+                result = a * b;
+                break;
+            case '/':
+                result = a / b;
+                break;
+            default:
+                System.out.println("Некорректная операция");
+        }
+
+        // В зависимости от символа вывести в консоль результат выполнения соответствующей арифметической операции.
+              System.out.println("Результат: " + result);
+    }
+}
