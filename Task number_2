@@ -1,0 +1,9 @@
+// Задача № 2
+public class Variable_Test_3 {
+    public static void main(String[] args) { 
+    // Создайте переменную типа с плавающей точкой с наибольшим диапазоном чисел. Присвойте ей произвольное дробное значение
+    double TestDouble = 1234567890123.456789;
+    System.out.println(TestDouble);
+     // Создайте переменную целочисленного типа с наименьшим диапазоном чисел. Присвойте ей наибольшее возможное значение
+    byte TestByte = 127;
+    System.out.println(TestByte); } }
