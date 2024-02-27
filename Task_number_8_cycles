@@ -1,0 +1,16 @@
+public class Task_number_8_cycles {
+        public static void main(String[] args) {
+         // Напишите программу, где пользователь вводит любое целое положительное число n.
+         // А программа суммирует все нечетные числа от 1 до введенного пользователем числа n.
+            Scanner s = new Scanner(System.in);
+            System.out.println("Ведите любое целое положительное число");
+            int a = s.nextInt();
+
+            int sumOdd = 0;
+
+            for (int i = 1; i <= a; i += 2) {
+                sumOdd += i;
+            }
+            System.out.println("Сумма всех нечетных чисел от 1 до " + a + " равна: " + sumOdd);
+        }
+}
