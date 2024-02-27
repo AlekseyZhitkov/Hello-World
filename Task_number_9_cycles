@@ -1,0 +1,34 @@
+public class Task_number_9_cycles {
+    public static void main(String[] args) {
+        // 1. Пользователь вводит размер массива и данные с клавиатуры в массив типа double.
+        Scanner s = new Scanner(System.in);
+
+        // вводим размер массива
+        int size = s.nextInt();
+        double[] arr = new double[size];
+
+        // вводим данные в ячейки массива
+        for (int i = 0; i < size; i++) {
+            arr[i] = s.nextDouble();
+        }
+
+        // 2. Посчитайте среднее арифметическое элементов массива.
+        double sum = 0;
+        for (double num : arr) {
+            sum += num;
+        }
+        double middle = sum / size;
+        System.out.println("Среднее арифметическое элементов массива: " + middle);
+
+        // 3. После этого произведите вывод массива на экран, где каждый элемент массива умножается на среднее арифметическое
+        // Умножение каждого элемента массива на среднее ариффметическое
+        double[] resultArr = new double[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            resultArr[i] = arr[i] * middle;
+        }
+        // Вывод на экран массива
+        for (double num : resultArr) {
+            System.out.print(num + " ");
+        }
+    }
+}
