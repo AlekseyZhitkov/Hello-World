@@ -1,0 +1,34 @@
+public class Task_number_10_cycles {
+    public static void main(String[] args) {
+        // пользователь вводит данные с клавиатуры в матрицу
+        Scanner s = new Scanner(System.in);
+
+        // вводим кол-во строк матрицы
+        int matrixRows = s.nextInt();
+
+        // вводим кол-во столбцов матрицы
+        int matrixColumns = s.nextInt();
+
+        int[][] matrix = new int[matrixRows][matrixColumns];
+
+        // Заполняем матрицу данными
+        for (int i = 0; i < matrixRows; i++) {
+            for (int j = 0; j < matrixColumns; j++) {
+                matrix[i][j] = s.nextInt();
+
+            }
+        }
+        // Выводим матрицу
+        for (int i = 0; i < matrixRows; i++) {
+            for (int j = 0; j < matrixColumns; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            // Делаем пропуск сроки
+            System.out.println();
+        }
+        // Выводим произведение каждого элемента из первой строки на 3
+        for (int i = 0; i < matrixColumns; i++) {
+            System.out.print(matrix[0][i] * 3 + " ");
+        }
+    }
+}
