@@ -1,0 +1,38 @@
+public class Task_number_12_working_with_data {
+    public static void main(String[] args) {
+        // Напишите программу, принимающую на вход строку “I like Java!!!”, которая будет выполнять следующие действия:
+        Scanner s = new Scanner(System.in);
+
+        String str = s.nextLine();
+
+        //1. Проверить, содержит ли строка подстроку “Java” (используйте contains()).
+        if (str.contains("Java")) {
+            System.out.println("Да, строка содержит подстроку 'Java'.");
+        } else {
+            System.out.println("Строка не содержит подстроку 'Java'.");
+        }
+
+        //2. Проверить, начинается ли строка с подстроки “I like” (используйте startsWith()).
+        if (str.startsWith("I like")) {
+            System.out.println("Да, строка начинается с 'I like'");
+        }
+        else {
+            System.out.println("Строка не начинается с 'I like'");
+        }
+        //3. Проверить, заканчивается ли строка с подставки “!!!” (используйте endsWith()).
+        if (str.endsWith("!!!")) {
+            System.out.println("Да, строка заканчивается '!!!'");
+        }
+        else {
+            System.out.println("Строка не заканчивается '!!!");
+        }
+        //4. Если 3 предыдущих условия верны, выведите данную строку, преобразованную к верхнему регистру.
+        if (str.contains("Java") & str.startsWith("I like") & str.endsWith("!!!")) {
+            System.out.println(str.toUpperCase());
+        }
+        //5. Замените все символы ‘a’ на ‘о’ и введите подстроку “Jovo” на экран (используйте substring()).
+        String replacedString = str.replace('a', 'o');
+        String subString = replacedString.substring(replacedString.indexOf("Jovo"), replacedString.indexOf("Jovo") + 4);
+        System.out.println("I like " + subString + "!!!");
+    }
+}
