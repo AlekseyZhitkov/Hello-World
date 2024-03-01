@@ -1,0 +1,35 @@
+public class Task_number_14_working_with_data {
+    public static void main(String[] args) {
+        //Напишите программу, заполняющую массив из 15 элементов рандомными значениями в диапазоне от -20 до 20. Далее:
+        int [] number1 = new int[15];
+
+        Random random = new Random();
+
+
+        for (int i = 0; i < number1.length; i++) {
+            number1[i] = random.nextInt(41) - 20;
+        }
+        //1. Выведите максимальный и минимальный элемент массива.
+        int max = number1[0];
+        int min = number1[0];
+
+        for (int i = 0; i < number1.length; i++) {
+            if (number1[i] > max) {
+                max = number1[i];
+            }
+
+            if (number1[i] < min) {
+                min = number1[i];
+            }
+
+            System.out.print(number1[i] + " "); 
+        }
+        System.out.println();
+        System.out.println("Максимальный элемент: " + max);
+        System.out.println("Минимальный элемент: " + min);
+
+        //2. Из максимального и минимального значения выведите наибольшее по модулю.
+        int maxAbs = Math.max(Math.abs(max), Math.abs(min));
+        System.out.println("Наибольшее по модулю: " + maxAbs);
+    }
+}
