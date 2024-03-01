@@ -1,0 +1,24 @@
+public class Task_number_13_working_with_data {
+    public static void main(String[] args) {
+        // Напишите программу, где пользователь должен ввести строку из слов, разделенных пробелами. Например: “I love java 8 Я люблю java 14 core1”. Выполните следующие действия:
+        Scanner s = new Scanner(System.in);
+        System.out.println("Введите строку из слов, разделенных пробелами");
+
+        String str = s.nextLine();
+        System.out.println(str);
+
+        //1. Выведите слова, состоящие только из латиницы.
+        String[] words = str.split(" ");
+        int count = 0;
+
+        System.out.println("Слова, состоящие только из латиницы:"); // Выводим заголовок перед словами из латиницы
+        for (String word : words) {
+            if (word.matches("[a-zA-Z]+")) {
+                System.out.println(word); 
+                count++; 
+            }
+        }
+        //2. Выведите количество этих слов.
+        System.out.println("Количество слов, состоящих только из латиницы: " + count);
+    }
+}
