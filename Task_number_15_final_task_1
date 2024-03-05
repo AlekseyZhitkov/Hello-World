@@ -1,0 +1,23 @@
+public class Task_number_15_final_task_1 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        // Вводим курс доллара
+        System.out.println("Введите нынещний курс доллара");
+
+        double kurs = s.nextDouble();
+        System.out.println("Нынешний курс доллара: " + kurs + " рублей за один доллар");
+        System.out.println();
+
+        // Вводим кол-во рублей который хотим перевести
+        System.out.println("Введите кол-во рублей");
+
+        double rubles = s.nextDouble();
+
+        //Выводим конвертацию
+        double dollars = rubles / kurs;
+
+        double roundedDollars = Math.round(dollars * 100.0) / 100.0;
+        System.out.printf("Результат конвертации: %.2f долларов%n", roundedDollars);
+    }
+}
