@@ -1,0 +1,38 @@
+public class Task_number_15_final_task_3 {
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Введите количество строк:");
+        int n = s.nextInt();
+        s.nextLine(); // consume newline character
+
+        String maxUnique = "";
+        int maxCount = 0;
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Введите строку:");
+            String input = s.nextLine();
+
+            int[] charCount = new int[256]; // Assuming ASCII characters
+
+            for (char c : input.toCharArray()) {
+                charCount[c]++;
+            }
+
+            int uniqueCount = 0;
+            for (int count : charCount) {
+                if (count > 0) {
+                    uniqueCount++;
+                }
+            }
+
+            if (uniqueCount > maxCount) {
+                maxCount = uniqueCount;
+                maxUnique = input;
+            }
+        }
+
+        System.out.println("Строка с максимальным количеством различных символов: " + maxUnique);
+    }
+}
