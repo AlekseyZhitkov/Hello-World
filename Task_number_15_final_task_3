@@ -5,7 +5,7 @@ public class Task_number_15_final_task_3 {
 
         System.out.println("Введите количество строк:");
         int n = s.nextInt();
-        s.nextLine(); // consume newline character
+        s.nextLine();
 
         String maxUnique = "";
         int maxCount = 0;
@@ -14,7 +14,7 @@ public class Task_number_15_final_task_3 {
             System.out.println("Введите строку:");
             String input = s.nextLine();
 
-            int[] charCount = new int[256]; // Assuming ASCII characters
+            int[] charCount = new int[256];
 
             for (char c : input.toCharArray()) {
                 charCount[c]++;
