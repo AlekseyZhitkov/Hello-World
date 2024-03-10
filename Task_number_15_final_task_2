@@ -1,0 +1,36 @@
+public class Task_number_15_final_task_2 {
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Введите уравнение (например, x+2=8): ");
+        String equation = s.nextLine();
+
+        char sign = equation.charAt(1);
+        int a = Character.isDigit(equation.charAt(0)) ? Character.getNumericValue(equation.charAt(0)) : 0;
+        int b = Character.isDigit(equation.charAt(2)) ? Character.getNumericValue(equation.charAt(2)) : 0;
+        int c = Character.getNumericValue(equation.charAt(4));
+
+        int x;
+        if (equation.charAt(0) == 'x') {
+            if (sign == '+') {
+                x = c - b;
+            } else {
+                x = c + b;
+            }
+        } else if (equation.charAt(2) == 'x') {
+            if (sign == '+') {
+                x = c - a;
+            } else {
+                x = a - c;
+            }
+        } else {
+            if (sign == '+') {
+                x = a + b;
+            } else {
+                x = a - b;
+            }
+        }
+        System.out.println("Решение: x = " + x);
+    }
+}
