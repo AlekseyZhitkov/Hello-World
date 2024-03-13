@@ -1,0 +1,33 @@
+public class Task_number_15_final_task_4 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int attempts = 3;
+        boolean input = false;
+
+        System.out.println("Загадка: Сидит дед, во сто шуб одет, кто его раздевает, тот слезы проливает");
+        System.out.println("У вас есть 3 попытки!");
+
+        while (attempts > 0) {
+            String answer = s.nextLine();
+
+            if (answer.equalsIgnoreCase("Заархивированный вирус")) {
+                System.out.println("Правильно!");
+                break;
+            } else if (answer.equalsIgnoreCase("Подсказка") && !input && attempts > 2) {
+                System.out.println("Подсказка: Этим болеют не только люди");
+                input = true;
+            }
+            else if (input) {
+                System.out.println("Подсказка уже недоступна");
+                attempts--;
+            }
+            else {
+                System.out.println("Подумай еще!");
+                attempts--;
+            }
+            if (attempts == 0) {
+                System.out.println("Обидно, приходи в другой раз");
+            }
+        }
+    }
+}
